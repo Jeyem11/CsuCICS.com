@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0px;
+  font-family: "segoe ui";
+  background: linear-gradient(
+    135deg,
+    rgba(5, 54, 170, 1) 0%,
+    rgba(83, 237, 237, 1) 53%,
+    rgba(0, 216, 115, 1) 100%
+  );
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  background-color: #bcecec;
+  position: relative;
+}
+
+nav > .nav-header {
+  display: inline;
+  cursor: pointer;
+}
+nav > .nav-header > img {
+  height: 90%;
+  margin-top: 2px;
+  border-radius: 50%;
+  margin-left: 30px;
+}
+nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #000;
+  font-weight: bolder;
+  padding: 10px 10px 10px 10px;
+  vertical-align: top;
+}
+
+nav > .nav-btn {
+  display: none;
+}
+
+nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+nav > .nav-links > a:hover {
+  background-color: #fff;
+}
+
+nav > #nav-check {
+  display: none;
+}
+main {
+  margin: 0 auto;
+  margin-top: 100px;
+  background: #fff url(img/bg.svg) no-repeat bottom right;
+  width: 90%;
+  height: 60%;
+  padding: 1em 1.4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+}
+.course {
+  width: 90%;
+  margin: 0 auto;
+  height: fit-content;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+.aboutabout {
+  text-align: left;
+}
+.about {
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+.cta {
+  display: block;
+  color: #fff;
+  background: #0e7fff;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 1em;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  width: 150px;
+  margin-top: 10px;
+}
+.bscsinfo {
+  text-align: justify;
+  margin: 30px;
+}
+#my-form {
+  padding: 2rem;
+  background: url(img/csuback.jpg);
+  background-size: cover;
+}
+
+#my-form label {
+  display: block;
+}
+
+#my-form input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  border: 0;
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+.btn:hover {
+  background: #444;
+}
+.nav2 {
+  margin: 20px;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+.nav2 ul {
+  list-style: none;
+  display: flex;
+  background: #a6d9e9;
+  border-radius: 10px;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.nav2 ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  display: block;
+  padding: 1.5em 2em;
+  background-color: rgba(255, 255, 255, 0.35);
+  color: #000;
+}
+.nav2 ul li a:hover {
+  background-color: #a6d9e9;
+}
+.Job-Suitable {
+  list-style: square;
+  list-style-position: inside;
+  text-align: left;
+  margin-left: 50px;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+@media (max-width: 600px) {
+  nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  nav > .nav-btn > label:hover,
+  nav #nav-check:checked ~ .nav-btn > label {
+    background-color: #fff;
+  }
+  nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #000;
+  }
+  nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #bcecec;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
